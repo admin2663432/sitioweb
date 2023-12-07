@@ -1,0 +1,726 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.top-bar,
+.main-content,
+.footer {
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px;
+  background-color: #FF113D;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-link {
+  text-decoration: none;
+  font-weight: medium;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.user-link:hover {
+  background-color: #e61035;
+}
+
+.search-bar {
+  display: flex;
+  border: 1px solid #bdbdbd;
+  padding: 5px;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #FF113D;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #e61035;
+}
+
+.filaheader2 {
+  background-color: #003159;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #FF3029;
+  color: #081a24;
+}
+
+.main-nav .contact-number {
+  color: #FF3029;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .main-nav a:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.featured-products {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.featured-products .product {
+  width: calc(50% - 20px);
+  margin: 10px;
+  height: 150px;
+  background-color: #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerprin {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.headerrigth {
+  max-width: 20%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.headerok {
+  max-width: 80%;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filaunica {
+  color: #fff;
+  display: grid;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebarcont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  background: linear-gradient(135deg, #FFF, #FF113D);
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul {
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul > li {
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sidebar ul > li:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  background-color: #e61035;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  background-image: url("./img/img1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .sidebarcont {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    border-right: 1px solid #ddd;
+    border-bottom: none;
+    width: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar,
+  .search-bar,
+  .main-content {
+    flex-direction: column;
+    background-color: #f7f7f7;
+  }
+
+  .main-content {
+    margin: 0;
+    width: 100%;
+  }
+
+  .featured-products .product {
+    width: 100%;
+  }
+
+  .banner {
+    flex-grow: 1;
+    padding: 20px;
+    height: 200px;
+  }
+
+  .headerprin {
+    background-color: #003159;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.filamaincont0, .filamaincont {
+  background-color: #f7f7f7;
+  padding: 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filamaincont:last-child {
+  border-bottom: none;
+}
+
+.product-card {
+  width: calc(50% - 20px);
+  margin: 10px;
+  display: flex;
+  border-radius: 25px;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: #FF113D; /* Color primario para efecto hover */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+.product-image {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ddd;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.product-title, .sku, .product-description {
+  margin-bottom: 10px;
+}
+
+.more-info {
+  text-decoration: none;
+  color: #003159; /* Color secundario para enlaces */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.more-info:hover {
+  color: #FF113D; /* Color primario para efecto hover */
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .product-image {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.right-side {
+  flex-basis: 30%;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+.right-side h3 {
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.right-side p, .right-side form, .right-side ul {
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #FF113D; /* Color primario para hover */
+}
+
+.social-media .social-link i {
+  margin-right: 8px;
+}
+
+.newsletter input[type="email"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.newsletter button {
+  width: 100%;
+  background-color: #FF113D; /* Color primario para botón */
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #D3102D; /* Tono más oscuro del color primario */
+}
+
+.featured-articles ul, .events-calendar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.featured-articles li, .events-calendar li {
+  margin-bottom: 5px;
+}
+
+.featured-articles a, .events-calendar li {
+  color: #003159; /* Color secundario para enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.featured-articles a:hover, .events-calendar li:hover {
+  color: #FF113D; /* Color primario para hover */
+}
+
+.events-calendar span {
+  font-weight: bold;
+}
+
+.promotions p {
+  color: #fff;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  .left-side, .right-side {
+    flex-basis: 100%;
+  }
+}
+
+.footer {
+  background-color: #003159; /* Color de fondo oscuro */
+  color: white; /* Texto en blanco */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: background 0.5s;
+   /* Transición suave del fondo */
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -ms-transition: background 0.5s;
+  -o-transition: background 0.5s;
+}
+
+/* Estilos de degradado */
+.degradado-1 {
+  background: linear-gradient(to right, #FF113D, #003159);
+}
+
+.degradado-2 {
+  background: linear-gradient(to right, #1D4313, #7A0179);
+}
+
+/* ...puedes agregar más estilos de degradado según necesites */
+
+.footer-section {
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.map-container iframe {
+  max-width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados para el mapa */
+}
+
+.credits {
+  margin-top: 20px;
+  color: #fff; /* Color distintivo para los créditos */
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
+
+.clock {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+.misidebar {
+  background: linear-gradient(135deg, #FF113D, #003159);
+  width: 100%; /* Ajusta según tu layout */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #333; /* Fondo oscuro para contraste */
+  color: #fff; /* Texto en blanco */
+}
+
+.misidebar h3 {
+  color: #fff; /* Título en blanco */
+  margin-bottom: 10px;
+}
+
+.misidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.misidebar ul li a {
+  text-decoration: none;
+  color: #fff; /* Enlaces en blanco */
+  transition: color 0.3s ease;
+}
+
+.misidebar ul li a:hover {
+  color: #ddd; /* Enlaces en un tono más claro al pasar el ratón */
+}
+
+.promotions, .testimonials, .polls {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #444; /* Fondo ligeramente más claro para el bloque de cita */
+  border-left: 5px solid #007bff;
+  color: #fff; /* Texto en blanco */
+}
+
+blockquote:before {
+  content: open-quote;
+  color: #fff;
+}
+
+blockquote:after {
+  content: close-quote;
+  color: #fff;
+}
+
+.polls form {
+  margin-top: 10px;
+}
+
+.polls input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.polls input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.recommended-links ul li {
+  margin-bottom: 5px;
+  color: #fff; /* Texto en blanco */
+}
+
+.categories {
+  font-family: 'Arial', sans-serif;
+  background-color: #333; /* Color de fondo del contenedor */
+  color: #fff; /* Color del texto */
+  padding: 20px; /* Relleno alrededor del contenido */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.categories h3 {
+  margin-bottom: 10px;
+}
+
+.categories ul {
+  list-style: none; /* Elimina los marcadores de lista */
+  padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.categories li {
+  display: inline; /* Muestra las etiquetas en línea */
+}
+
+.categories a {
+  display: inline-block;
+  background-color: #FF113D; /* Color de fondo de la etiqueta */
+  color: #fff; /* Color del texto */
+  padding: 5px 10px; /* Relleno dentro de la etiqueta */
+  margin: 5px 5px 5px 0; /* Margen alrededor de las etiquetas */
+  border-radius: 15px; /* Bordes redondeados para las etiquetas */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.categories a:hover {
+  background-color: #D3102D; /* Cambia el color al pasar el ratón por encima */
+}
+
+
+.recent-posts {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.recent-posts h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.news-item img {
+  width: 100px; /* Ajusta según tus necesidades */
+  height: auto;
+  margin-right: 15px;
+  border-radius: 4px; /* Opcional: para bordes redondeados */
+}
+
+.news-item .news-content {
+  flex-grow: 1;
+}
+
+.news-content h4 {
+  margin: 0 0 5px 0;
+  color: #007bff; /* Color del título de la noticia */
+}
+
+.news-content p {
+  margin: 0;
+  color: #555; /* Color del texto */
+}
+
+.news-content a {
+  text-decoration: none;
+  color: inherit; /* Hereda el color del texto */
+}
+
+.news-content a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+}
+
+/* Estilo base del botón */
+.miboton {
+  background-color: #FF113D; /* Color primario: rojo */
+  color: white; /* Texto en blanco para contraste */
+  padding: 10px 20px; /* Relleno alrededor del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: bold; /* Texto en negrita */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave para color y sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera para efecto de elevación */
+}
+
+/* Efecto hover */
+.miboton:hover {
+  background-color: #D3102D; /* Un tono más oscuro del color primario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Efecto focus */
+.miboton:focus {
+  outline: none; /* Elimina el resalte predeterminado */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3); /* Resalte blanco y sombra */
+}
+
+
+
+  .round-button {
+    background-color: #fff; /* Color de fondo */
+    border: none; /* Elimina el borde por defecto */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Relleno del botón */
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    text-align: center; /* Alinea el texto al centro */
+    text-decoration: none; /* Elimina la decoración del texto */
+    display: inline-block; /* Hace que el botón sea un bloque en línea */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 4px 2px; /* Margen alrededor del botón */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
+    box-shadow: 0 5px #999; /* Sombra para el efecto de relieve */
+    transition: all 0.3s ease; /* Transición suave para el efecto al hacer clic */
+  }
+
+  .round-button:hover {
+    background-color: #fff; /* Cambia el color de fondo al pasar el ratón por encima */
+  }
+
+  .round-button:active {
+    box-shadow: 0 2px #666; /* Cambia la sombra para el efecto al hacer clic */
+    transform: translateY(
+      4px
+    ); /* Mueve el botón hacia abajo al hacer clic */
+  }
